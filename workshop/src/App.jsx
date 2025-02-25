@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import Home from "./screens/Home";
 import ScrollToTop from "./components/ScrollToTop";
+import Login from "./screens/Login";
+import Signup from "./screens/SignUp";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
           </Routes>
         </div>
       </Router>

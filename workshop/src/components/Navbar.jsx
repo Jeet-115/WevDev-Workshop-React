@@ -12,13 +12,21 @@ const Navbar = () => {
   // Header animation
   const headerVariants = {
     hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
   };
 
   // Menu fade animation
   const menuVariants = {
     hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut" },
+    },
     exit: { opacity: 0, y: -20, transition: { duration: 0.3, ease: "easeIn" } },
   };
 
@@ -45,22 +53,51 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
-        <motion.div className="text-[#5b4dff] text-2xl font-bold roboto-flex transition-transform duration-300 ease-in-out hover:scale-110" variants={itemVariants} custom={0.1}>
-          Infinity Linkage
-        </motion.div>
+          <motion.div
+            className="text-[#5b4dff] text-2xl font-bold roboto-flex transition-transform duration-300 ease-in-out hover:scale-110"
+            variants={itemVariants}
+            custom={0.1}
+          >
+            AllinOne
+          </motion.div>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8 text-lg font-semibold gendy">
-          <motion.a href="#" className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110" variants={itemVariants} custom={0.2}>Home</motion.a>
-          <motion.a href="#" className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110" variants={itemVariants} custom={0.3}>About</motion.a>
-          <motion.a href="#" className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110" variants={itemVariants} custom={0.4}>Services</motion.a>
-          <motion.a href="#" className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110" variants={itemVariants} custom={0.5}>Contact</motion.a>
+          <motion.div variants={itemVariants} custom={0.2}>
+            <Link
+              to="/"
+              className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110"
+            >
+              Home
+            </Link>
+          </motion.div>
+
+          <motion.div variants={itemVariants} custom={0.4}>
+            <Link
+              to="/login"
+              className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110"
+            >
+              Login
+            </Link>
+          </motion.div>
+
+          <motion.div variants={itemVariants} custom={0.5}>
+            <Link
+              to="/signup"
+              className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110"
+            >
+              Sign Up
+            </Link>
+          </motion.div>
         </nav>
 
         {/* Mobile Hamburger Button */}
         <motion.div className="md:hidden" variants={itemVariants} custom={0.2}>
-          <button onClick={handleToggle} className="focus:outline-none relative w-10 h-10 flex flex-col justify-center items-center">
+          <button
+            onClick={handleToggle}
+            className="focus:outline-none relative w-10 h-10 flex flex-col justify-center items-center"
+          >
             <motion.div
               animate={{ rotate: isMenuOpen ? 45 : 0, y: isMenuOpen ? 6 : 0 }}
               className="w-8 h-[3px] bg-black rounded-md"
@@ -88,10 +125,32 @@ const Navbar = () => {
             className="absolute top-16 left-0 w-full bg-white backdrop-blur-md shadow-lg rounded-b-lg md:hidden"
           >
             <nav className="flex flex-col items-center py-4 space-y-4 text-lg font-semibold gendy">
-              <motion.a href="#" className="hover:text-gray-600" variants={itemVariants} custom={0.1}>Home</motion.a>
-              <motion.a href="#" className="hover:text-gray-600" variants={itemVariants} custom={0.2}>About</motion.a>
-              <motion.a href="#" className="hover:text-gray-600" variants={itemVariants} custom={0.3}>Services</motion.a>
-              <motion.a href="#" className="hover:text-gray-600" variants={itemVariants} custom={0.4}>Contact</motion.a>
+              <motion.div variants={itemVariants} custom={0.2}>
+                <Link
+                  to="/"
+                  className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110"
+                >
+                  Home
+                </Link>
+              </motion.div>
+
+              <motion.div variants={itemVariants} custom={0.4}>
+                <Link
+                  to="/login"
+                  className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110"
+                >
+                  Login
+                </Link>
+              </motion.div>
+
+              <motion.div variants={itemVariants} custom={0.5}>
+                <Link
+                  to="/signup"
+                  className="hover:text-gray-600 transition-transform duration-300 ease-in-out hover:scale-110"
+                >
+                  Sign Up
+                </Link>
+              </motion.div>
             </nav>
           </motion.div>
         )}
