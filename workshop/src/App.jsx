@@ -9,6 +9,8 @@ import Home from "./screens/Home";
 import ScrollToTop from "./components/ScrollToTop";
 import Login from "./screens/Login";
 import Signup from "./screens/SignUp";
+import ProductDetails from "./components/Products/ProductDetails";
+import ItemDetails from "./components/Products/ItemDetails";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/item/:id" element={<ItemDetails />} />
           </Routes>
         </div>
       </Router>
