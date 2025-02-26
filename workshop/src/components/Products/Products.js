@@ -63,10 +63,10 @@ const products = [
     id: 7,
     heading: "Explore more from Small Businesses",
     items: [
-      { image: "./ethenicdresses.jpg", name: "Ethnic dresses" },
+      { image: "./ethnicdresses.jpg", name: "Ethnic dresses" },
       { image: "./decor.jpg", name: "Decor" },
       { image: "./fashion.jpg", name: "Fashion accessories" },
-      { image: "./glassware", name: "glassware & drinkware" },
+      { image: "./glassware.jpg", name: "glassware & drinkware" },
     ],
   },
   {

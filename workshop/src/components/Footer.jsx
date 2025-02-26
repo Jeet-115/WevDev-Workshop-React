@@ -21,23 +21,33 @@ Footer.TopSection = () => {
   const socialLinks = [
     {
       href: "https://linkedin.com/in/jeet-mistry-67a613233",
-      icon: <FaLinkedin size={50} className="text-blue-600" />,
+      icon: (
+        <FaLinkedin className="text-blue-600 lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8" />
+      ),
     },
     {
       href: "https://github.com/Jeet-115",
-      icon: <FaGithub size={50} className="text-gray-800 dark:text-white" />,
+      icon: (
+        <FaGithub className="text-gray-800 dark:text-white lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8" />
+      ),
     },
     {
       href: "mailto:jeetmistry115@gmail.com",
-      icon: <FaEnvelope size={50} className="text-red-500" />,
+      icon: (
+        <FaEnvelope className="text-red-500 lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8" />
+      ),
     },
     {
       href: "https://www.instagram.com/jeet_.115/",
-      icon: <FaInstagram size={50} className="text-pink-500" />,
+      icon: (
+        <FaInstagram className="text-pink-500 lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8" />
+      ),
     },
     {
       href: "https://facebook.com/jeet.mistry.7543/",
-      icon: <FaFacebook size={50} className="text-blue-700" />,
+      icon: (
+        <FaFacebook className="text-blue-700 lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8" />
+      ),
     },
   ];
 
@@ -118,7 +128,7 @@ Footer.TextSection = () => (
       }}
     >
       <span
-        className="text-[65px] md:text-[150px] lg:text-[245px] font-bold"
+        className="text-[55px] md:text-[130px] lg:text-[245px] font-bold"
         style={{ letterSpacing: "0.2em" }} // Adjust this value for more or less spacing
       >
         AllinOne

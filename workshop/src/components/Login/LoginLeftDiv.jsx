@@ -25,16 +25,16 @@ const LoginLeftDiv = () => {
   };
 
   return (
-    <div className="flex-1 flex items-center justify-center">
+    <div className="flex-1 flex items-center justify-center mt-8 lg:mt-12 mb-12 lg:mb-0">
       <motion.div
-        className="p-6 w-full max-w-sm"
+        className="p-6 md:p-8 w-full max-w-md bg-white/40 backdrop-blur-lg border border-[#05445E]/30 rounded-2xl shadow-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         {/* Title */}
         <motion.h1
-          className="text-white text-5xl font-bold text-center mb-4"
+          className="text-[#05445E] text-5xl font-bold text-center mb-4"
           {...animationSettings}
           transition={animationSettings.transition(0.1)}
         >
@@ -42,7 +42,7 @@ const LoginLeftDiv = () => {
         </motion.h1>
 
         <motion.h2
-          className="text-white text-sm text-center mb-8"
+          className="text-[#05445E]/70 text-sm text-center mb-6"
           {...animationSettings}
           transition={animationSettings.transition(0.2)}
         >
@@ -63,7 +63,7 @@ const LoginLeftDiv = () => {
               value={formData.username}
               onChange={handleChange}
               placeholder="Email ID"
-              className="w-full px-4 py-3 rounded-full bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-full p-3 rounded-full bg-white/30 text-[#06283D] placeholder-[#05445E]/70 border border-[#05445E]/50 focus:border-[#05445E] focus:ring-[#05445E] outline-none"
             />
             {errors.username && <p className="text-red-500 text-sm mt-1">{errors.username}</p>}
           </motion.div>
@@ -81,12 +81,12 @@ const LoginLeftDiv = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Password"
-                className="w-full px-4 py-3 rounded-full bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+                className="w-full p-3 rounded-full bg-white/30 text-[#06283D] placeholder-[#05445E]/70 border border-[#05445E]/50 focus:border-[#05445E] focus:ring-[#05445E] outline-none"
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-4 flex items-center text-gray-500 hover:text-black"
+                className="absolute inset-y-0 right-3 flex items-center text-[#05445E]/70 hover:text-[#05445E]"
               >
                 {showPassword ? "🙈" : "👁"}
               </button>
@@ -101,16 +101,14 @@ const LoginLeftDiv = () => {
             transition={animationSettings.transition(0.5)}
           >
             <div></div>
-            <Link to="/signup" className="text-white text-sm hover:underline">
+            <Link to="/signup" className="text-[#05445E] text-sm hover:underline">
               New User? Sign Up
             </Link>
           </motion.div>
 
           <motion.button
             type="submit"
-            className="w-full bg-black text-white py-3 rounded-full font-semibold hover:opacity-80 transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="w-full bg-[#05445E] text-white py-3 rounded-full font-semibold transition-transform duration-300 ease-in-out hover:scale-105 "
             {...animationSettings}
             transition={animationSettings.transition(0.6)}
           >
@@ -124,22 +122,22 @@ const LoginLeftDiv = () => {
           {...animationSettings}
           transition={animationSettings.transition(0.7)}
         >
-          <div className="flex-1 border-t border-dashed border-white"></div>
-          <span className="px-2 text-white text-sm">OR</span>
-          <div className="flex-1 border-t border-dashed border-white"></div>
+          <div className="flex-1 border-t border-dashed border-[#05445E]/50"></div>
+          <span className="px-2 text-[#05445E] text-sm">OR</span>
+          <div className="flex-1 border-t border-dashed border-[#05445E]/50"></div>
         </motion.div>
 
         {/* Social Login Options */}
         <motion.div
-          className="flex justify-center space-x-16 text-white text-md"
+          className="flex justify-center space-x-16 text-black text-md"
           {...animationSettings}
           transition={animationSettings.transition(0.8)}
         >
-          <button className="flex items-center space-x-2 hover:opacity-80 transition-all">
+          <button className="flex items-center space-x-2 transition-transform duration-300 ease-in-out hover:scale-110">
             <img src="/google.png" alt="Google" className="w-5 h-5" />
             <span>Google</span>
           </button>
-          <button className="flex items-center space-x-2 hover:opacity-80 transition-all">
+          <button className="flex items-center space-x-2 transition-transform duration-300 ease-in-out hover:scale-110">
             <img src="/github.png" alt="Github" className="w-5 h-5" />
             <span>Github</span>
           </button>
